@@ -1,0 +1,102 @@
+/*
+lembrar de:
+-arrumar o position absolute do botãoo e modal
+-mudar altura da pagina no min height em body
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    text-align: center;
+}
+
+footer {
+    background-color: #4682b4;
+    color: white;
+    padding: 17px;
+}
+
+header {
+    background-color: #4682b4;
+    color: white;
+    position: relative;
+    padding: 21px;
+}
+
+header h1 {
+    margin-bottom: 18px;
+}
+
+main {
+    background-color: #f0f0f0;
+}
+
+#noticias {
+    max-width: 100ch;
+    width: 100%;
+}
+
+#formularioBuscar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#campoBuscar {
+    padding: 11px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 605px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#botaoBuscar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    right: 450px;
+    top: 5%;
+}
+
+#filtroDahora {
+    position: absolute;
+    top: 59%;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#contadorFiltros {
+    margin-top: 15px;
+    margin-left: -6px;
+    background-color: white;
+    color: #4682b4;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+}
+
+dialog {
+    background-color: white;
+    padding: 16px;
+    border-radius: 6px;
+    position: fixed;
+    top: 40%;
+    left: 48%;
+    transform: translate(-40%, -48%);
+}
