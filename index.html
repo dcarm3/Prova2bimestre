@@ -4,46 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de notícias do IBGE</title>
+    <title>Notícias do IBGE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Portal de notícias do IBGE</h1>
-        <form id="formularioBuscar">
-            <input type="text" id="campoBuscar" placeholder="Buscar notícia por termo">
-            <button type="submit" id="botaoBuscar">🔍</button>
-        </form>
-        <div id="filtroDahora">
-            <svg width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
-                xmlns="http://www.w3.org/2000/svg" id="iconeFiltro">
-                <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
-            </svg>
-            <span id="contadorFiltros">0</span>
+        <h1>Notícias do IBGE</h1>
+        <div id="formularioBuscar">
+            <input type="text" id="campoBuscar" name="busca" placeholder="Buscar notícias">
+            <button id="botaoBuscar">🔍</button>
+            <div id="filtroContainer">
+                <svg id="iconeFiltro" width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+                </svg>
+                <div id="contadorFiltros">0</div>
+            </div>
         </div>
-        <dialog id="modalFiltros">
-            <form id="formularioFiltros">
-                <label for="filtroCategoria">Categoria:</label>
-                <input type="text" id="filtroCategoria" name="categoria"><br><br>
-                <label for="filtroData">Data:</label>
-                <input type="date" id="filtroData" name="data"><br><br>
-                <button type="submit">Aplicar Filtros</button>
-                <button type="button" id="fecharModal">Fechar</button>
-            </form>
-        </dialog>
     </header>
     <main>
-        <div id="noticias">
-        </div>
+        <div id="noticias"></div>
     </main>
-
     <footer>
-        <p>&copy; Prova do segundo bimestre - Programação WEB</p>
+        <p>Footer content here</p>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog id="modalFiltros">
+        <form id="formularioFiltros">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo">
+                <option value="">Selecione o tipo</option>
+            </select>
+            <button id="aplicarFiltros">Aplicar Filtros</button>
+        </form>
+        <button id="fecharModal">Fechar</button>
+    </dialog>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
